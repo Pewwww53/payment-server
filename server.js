@@ -34,6 +34,8 @@ app.get("/return", (req, res) => {
   `);
 });
 
-app.listen(3000, () => {
-  console.log("Payment server: http://localhost:3000");
+const port = process.env.PORT || 3000;
+
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Payment server listening on port ${port}`);
 });
